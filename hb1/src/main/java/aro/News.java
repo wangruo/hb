@@ -24,7 +24,10 @@ public class News implements Serializable {
         this.date = date;
     }
 
-    @GenericGenerator(name = "generator", strategy = "increment")
+    public News() {
+    }
+
+    @GenericGenerator(name = "generator", strategy = "identity")
     @Id
     @GeneratedValue(generator = "generator")
     @Column(name = "id", unique = true, nullable = false)
@@ -45,7 +48,7 @@ public class News implements Serializable {
         this.title = title;
     }
 
-    @Column(name = "author")
+    @Column(name = "author", unique = true, nullable = false)
     public String getAuthor() {
         return author;
     }
