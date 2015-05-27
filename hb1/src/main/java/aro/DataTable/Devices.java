@@ -10,8 +10,8 @@ import java.sql.Date;
  * Created by Administrator on 2015/05/25.
  */
 @Entity
-@Table(name = "DeviceList")
-public class DeviceList implements Serializable{
+@Table(name = "devices")
+public class Devices implements Serializable{
 
     private Integer id;
     private String sn;
@@ -20,18 +20,17 @@ public class DeviceList implements Serializable{
     private Date offline;
     private String ip;
 
-    public DeviceList(){
+    public Devices(){
 
     }
 
-    public DeviceList(String sn, boolean isOnline, Date online, Date offline, String ip) {
+    public Devices(String sn, boolean isOnline, Date online, Date offline, String ip) {
         this.sn = sn;
         this.isOnline = isOnline;
         this.online = online;
         this.offline = offline;
         this.ip = ip;
     }
-
 
     @GenericGenerator(name = "generator", strategy = "increment")
     @Id
@@ -64,5 +63,37 @@ public class DeviceList implements Serializable{
     @Column(name = "ip")
     public String getIp() {
         return ip;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public void setSn(String sn) {
+        this.sn = sn;
+    }
+
+    public void setOnline(Date online) {
+        this.online = online;
+    }
+
+    public void setOffline(Date offline) {
+        this.offline = offline;
+    }
+
+    public void setIp(String ip) {
+        this.ip = ip;
+    }
+
+    @Override
+    public String toString() {
+        return "Devices{" +
+                "id=" + id +
+                ", sn='" + sn + '\'' +
+                ", isOnline=" + isOnline +
+                ", online=" + online +
+                ", offline=" + offline +
+                ", ip='" + ip + '\'' +
+                '}';
     }
 }

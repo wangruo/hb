@@ -15,6 +15,6 @@
         <property name="format_sql">true</property>
 
         <mapping class="aro.News" />
-        <mapping class="aro.DataTable.DeviceList" />
+        <mapping class="aro.DataTable.Devices" />
     </session-factory>
 </hibernate-configuration>
