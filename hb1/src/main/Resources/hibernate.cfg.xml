@@ -19,5 +19,7 @@
         <mapping class="aro.DataTable.LiveRecord" />
         <mapping class="aro.DataTable.WorkData" />
         <mapping class="aro.DataTable.WorkRecord" />
+        <mapping class="aro.DataTable.RunTimeData" />
+        <mapping class="aro.DataTable.RunTimeRecord" />
     </session-factory>
 </hibernate-configuration>

@@ -20,6 +20,7 @@
       <column name="ID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="AlarmState" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="Angle" sqlType="FLOAT" precision="12" scale="0" nullable="true" jdbcType="7"/>
+      <column name="DeviceID" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="DipAngleX" sqlType="FLOAT" precision="12" scale="0" nullable="true" jdbcType="7"/>
       <column name="DipAngleY" sqlType="FLOAT" precision="12" scale="0" nullable="true" jdbcType="7"/>
       <column name="Fall" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
@@ -32,10 +33,7 @@
       <column name="TorquePercent" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="UpdateTime" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
       <column name="WindSpeed" sqlType="FLOAT" precision="12" scale="0" nullable="true" jdbcType="7"/>
-      <column name="DeviceID" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="ID"/>
-      <foreign-key name="FK585322D6FE102901" columns="DeviceID" ref-table="device" ref-schema="" ref-catalog="test" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="2"/>
-      <index name="FK585322D6FE102901" unique="false" columns="DeviceID"/>
     </table>
     <table name="LiveRecord" schema="" catalog="test" type="TABLE">
       <column name="ID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
