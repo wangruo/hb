@@ -1,5 +1,7 @@
 package aro;
 
+import aro.DataTable.Device;
+import aro.DataTable.LiveRecord;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -8,7 +10,6 @@ import org.hibernate.service.ServiceRegistry;
 import org.hibernate.service.ServiceRegistryBuilder;
 
 import java.sql.Date;
-import java.util.Locale;
 
 /**
  * Hello world!
@@ -63,8 +64,10 @@ public class App {
         final Session session = getSession();
         try {
             session.beginTransaction();
-            News p = new News("wo", "aro", Date.valueOf("2015-05-03"));
+            Device p = new Device("123456789012", true, new Date(new java.util.Date().getTime()), null, "127.0.0.1");
+            LiveRecord record = new LiveRecord();
             session.save(p);
+            session.save(record);
             session.getTransaction().commit();
         } finally {
             session.close();

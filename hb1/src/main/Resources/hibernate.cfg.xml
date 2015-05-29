@@ -14,7 +14,10 @@
         <property name="show_sql">true</property>
         <property name="format_sql">true</property>
 
-        <mapping class="aro.News" />
-        <mapping class="aro.DataTable.Devices" />
+        <mapping class="aro.DataTable.Device" />
+        <mapping class="aro.DataTable.LiveData" />
+        <mapping class="aro.DataTable.LiveRecord" />
+        <mapping class="aro.DataTable.WorkData" />
+        <mapping class="aro.DataTable.WorkRecord" />
     </session-factory>
 </hibernate-configuration>
